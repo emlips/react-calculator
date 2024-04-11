@@ -4,7 +4,7 @@ export default function Numbers({ setState, state }: Props) {
   const { currentNumber, hasDecimal, isNegative } = state;
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ".", "+/-"];
 
-  const handleClick = (number: any) => {
+  const buildNumber = (number: any) => {
     if (number === ".") {
       if (hasDecimal) return;
       setState({...state, hasDecimal: true});
@@ -26,7 +26,7 @@ export default function Numbers({ setState, state }: Props) {
   return (
     <div className="numbers">
       {numbers.map((number) => (
-        <button value={number} key={number} onClick={() => handleClick(number)}>
+        <button value={number} key={number} onClick={() => buildNumber(number)}>
           {number}
         </button>
       ))}

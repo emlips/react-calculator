@@ -16,7 +16,7 @@ export default function Equals({state, setState}: Props) {
     },
   };
 
-  const handleClick = () => {
+  const calculateEquals = () => {
     const {total, currentNumber, operator} = state
     let finalTotal = 0
     operator !== "" ? finalTotal = operators[operator as keyof typeof operators].call(
@@ -29,7 +29,7 @@ export default function Equals({state, setState}: Props) {
 
   return (
     <div className="equals">
-      <button onClick={handleClick}>=</button>
+      <button onClick={calculateEquals}>=</button>
     </div>
   );
 }

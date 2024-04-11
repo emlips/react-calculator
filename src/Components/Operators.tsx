@@ -16,7 +16,7 @@ export default function Operators({ state, setState }: Props) {
     },
   };
 
-  const handleClick = (newOperator: any) => {
+  const doCalculation = (newOperator: any) => {
     const { total, currentNumber, operator } = state;
     let newTotal = 0;
     operator !== ""
@@ -40,7 +40,7 @@ export default function Operators({ state, setState }: Props) {
         <button
           value={operation}
           key={operation}
-          onClick={() => handleClick(operation)}
+          onClick={() => doCalculation(operation)}
         >
           {operation}
         </button>
