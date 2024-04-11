@@ -1,29 +1,35 @@
 body {
   background-color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  color: #303030;
+}
+
+#title {
+  font-size: 1em;
+  margin: 2em;
+  text-align: center;
 }
 
 .calculator {
-  font-family: 'Courier New', Courier, monospace;
-  color: #303030;
   width: 80vw;
   max-width: 280px;
-  margin: 3em auto;
+  margin: 2em auto;
   padding: 10px 5px 20px 5px;
   border-radius: 5px;
   background-color: rgb(247, 247, 214);
   display: grid;
   justify-content: center;
   grid-template-columns: 7.4em 3.7em 3.7em;
-  grid-template-areas: 
-  "display display display"
-  "number number operators"
-  "number number operators"
-  "equals delete clear";
+  grid-template-areas:
+    "display display display"
+    "number number operators"
+    "number number operators"
+    "equals delete clear";
 }
 
 button {
-  color:  #303030;
-  font-family: 'Courier New', Courier, monospace;
+  color: #303030;
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   height: 2.75em;
   width: 2.75em;
