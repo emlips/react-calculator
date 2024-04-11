@@ -10,11 +10,13 @@ interface DisplayProps {
 }
 
 export default function Display({ state }: DisplayProps) {
-  useEffect(() => {}, [state.currentNumber])
+  const {currentNumber, total, operator} = state
+  useEffect(() => {}, [currentNumber])
 
   return (
     <div className="display">
-      <h1>{state.currentNumber.slice(0,12)}</h1>
+      <p>{total} {operator}</p>
+      <h1>{currentNumber.slice(0,12)}</h1>
     </div>
   );
 }
