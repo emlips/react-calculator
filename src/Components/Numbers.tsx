@@ -1,15 +1,6 @@
-interface NumbersProps {
-  state: {
-    total: number;
-    currentNumber: string;
-    operator: string;
-    hasDecimal: boolean;
-    isNegative: boolean;
-  };
-  setState: (arg0: any) => void;
-}
+import Props from "./props";
 
-export default function Numbers({ setState, state }: NumbersProps) {
+export default function Numbers({ setState, state }: Props) {
   const { currentNumber, hasDecimal, isNegative } = state;
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ".", "+/-"];
 

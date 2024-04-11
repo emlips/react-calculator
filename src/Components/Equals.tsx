@@ -1,14 +1,6 @@
-interface EqualsProps {
-  state: {
-    total: number;
-    currentNumber: string;
-    operator: string;
-    hasDecimal: boolean;
-  };
-  setState: (arg0: any) => void;
-}
+import Props from "./props";
 
-export default function Equals({state, setState}: EqualsProps) {
+export default function Equals({state, setState}: Props) {
   const operators = {
     "*": function (x: number, y: number) {
       return x * y;

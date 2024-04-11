@@ -1,8 +1,6 @@
-interface ClearProps {
-  setState: (arg0: any) => void;
-}
+import Props from "./props";
 
-export default function Clear({setState}: ClearProps) {
+export default function Clear({setState}: Props) {
     const handleClick = () => {
       setState({total: 0, currentNumber: "", operator: "", hasDecimal: false})
     }

@@ -17,11 +17,11 @@ function App() {
 
   return (
     <div className="calculator">
-      <Display state={state}/>
+      <Display state={state} setState={setState}/>
       <Numbers state={state} setState={setState}/>
       <Operators state={state} setState={setState}/>
       <Equals state={state} setState={setState}/>
-      <Clear setState={setState}/>
+      <Clear state={state} setState={setState}/>
     </div> 
   );
 }

@@ -1,15 +1,7 @@
 import { useEffect } from "react";
+import Props from "./props";
 
-interface DisplayProps {
-  state: {
-    total: number;
-    currentNumber: string;
-    operator: string;
-    hasDecimal: boolean;
-  };
-}
-
-export default function Display({ state }: DisplayProps) {
+export default function Display({ state }: Props) {
   const {currentNumber, total, operator} = state
   useEffect(() => {}, [currentNumber])
 
