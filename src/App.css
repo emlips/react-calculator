@@ -1,12 +1,16 @@
+body {
+  background-color: #ffffff;
+}
+
 .calculator {
   font-family: 'Courier New', Courier, monospace;
   color: #303030;
   width: 80vw;
   max-width: 280px;
   margin: 3em auto;
-  padding: 10px 5px;
+  padding: 10px 5px 20px 5px;
   border-radius: 5px;
-  background-color: rgb(247, 247, 224);
+  background-color: rgb(247, 247, 214);
   display: grid;
   justify-content: center;
   grid-template-columns: 7.4em 3.7em 3.7em;
@@ -30,7 +34,7 @@ button {
 
 .display {
   grid-area: display;
-  background-color: white;
+  background-color: #ffffff;
   margin: 1em 0;
   border-radius: 5px;
   height: 4.5em;
