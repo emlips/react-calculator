@@ -7,7 +7,7 @@ export default function Display({ state }: Props) {
 
   return (
     <div className="display">
-      <p>{total} {operator}</p>
+      <p>{total.toString().slice(0,12)} {operator}</p>
       <h1>{currentNumber.slice(0,12)}</h1>
     </div>
   );
