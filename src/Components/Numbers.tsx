@@ -5,20 +5,33 @@ export default function Numbers({ setState, state }: Props) {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ".", "+/-"];
 
   const buildNumber = (number: any) => {
-    if (number === ".") {
-      if (hasDecimal) return;
-      setState({...state, hasDecimal: true});
+    if (number === "." && hasDecimal) {
+      return;
     }
     if (number === "+/-") {
-      setState(
+      return setState(
         isNegative
-          ? { ...state, currentNumber: currentNumber.slice(1), isNegative: !isNegative }
-          : { ...state, currentNumber: `-${currentNumber}`, isNegative: !isNegative }
+          ? {
+              ...state,
+              currentNumber: currentNumber.slice(1),
+              isNegative: !isNegative,
+            }
+          : {
+              ...state,
+              currentNumber: `-${currentNumber}`,
+              isNegative: !isNegative,
+            }
       );
     }
-    else setState(
+    setState(
       currentNumber.length !== 12
-        ? { ...state, currentNumber: `${currentNumber.toString()}${number}` }
+        ? number === "."
+          ? {
+              ...state,
+              currentNumber: `${currentNumber.toString()}${number}`,
+              hasDecimal: true,
+            }
+          : { ...state, currentNumber: `${currentNumber.toString()}${number}` }
         : { ...state }
     );
   };
