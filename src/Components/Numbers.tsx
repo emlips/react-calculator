@@ -1,19 +1,17 @@
-import { useState } from "react";
-
 interface NumbersProps {
   state: {
     total: number;
     currentNumber: string;
     operator: string;
     hasDecimal: boolean;
+    isNegative: boolean;
   };
   setState: (arg0: any) => void;
 }
 
 export default function Numbers({ setState, state }: NumbersProps) {
-  const { currentNumber, hasDecimal } = state;
+  const { currentNumber, hasDecimal, isNegative } = state;
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ".", "+/-"];
-  const [isNegative, setIsNegative] = useState(false);
 
   const handleClick = (number: any) => {
     if (number === ".") {
@@ -23,10 +21,9 @@ export default function Numbers({ setState, state }: NumbersProps) {
     if (number === "+/-") {
       setState(
         isNegative
-          ? { ...state, currentNumber: currentNumber.slice(1) }
-          : { ...state, currentNumber: `-${currentNumber}` }
+          ? { ...state, currentNumber: currentNumber.slice(1), isNegative: !isNegative }
+          : { ...state, currentNumber: `-${currentNumber}`, isNegative: !isNegative }
       );
-      setIsNegative(!isNegative);
     }
     else setState(
       currentNumber.length !== 12

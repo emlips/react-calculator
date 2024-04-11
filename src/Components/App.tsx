@@ -11,7 +11,8 @@ function App() {
         total: 0,
         currentNumber: "",
         operator: "",
-        hasDecimal: false
+        hasDecimal: false,
+        isNegative: false
     })
 
   return (
