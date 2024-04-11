@@ -11,15 +11,15 @@ body {
 }
 
 .calculator {
-  width: 80vw;
-  max-width: 280px;
+  width: 20em;
+  max-width: 350px;
   margin: 2em auto;
-  padding: 10px 5px 20px 5px;
+  padding: 10px 0 20px 0;
   border-radius: 5px;
   background-color: rgb(247, 247, 214);
   display: grid;
   justify-content: center;
-  grid-template-columns: 7.4em 3.7em 3.7em;
+  grid-template-columns: 8em 4em 4em;
   grid-template-areas:
     "display display display"
     "number number operators"
@@ -31,8 +31,9 @@ button {
   color: #303030;
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
-  height: 2.75em;
-  width: 2.75em;
+  font-weight: 600;
+  height: 3.25em;
+  width: 3em;
   margin: 2px;
   border: none;
   border-radius: 5px;
@@ -81,7 +82,7 @@ button {
 .equals {
   grid-area: equals;
   button {
-    width: 5.7em;
+    width: 6.2em;
     background-color: #44d9af;
   }
   button:active {
