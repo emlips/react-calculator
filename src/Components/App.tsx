@@ -5,6 +5,7 @@ import Display from "./Display";
 import Equals from "./Equals";
 import Numbers from "./Numbers";
 import Operators from "./Operators";
+import Delete from "./Delete";
 
 function App() {
     const [state, setState] = useState({
@@ -22,6 +23,7 @@ function App() {
       <Operators state={state} setState={setState}/>
       <Equals state={state} setState={setState}/>
       <Clear state={state} setState={setState}/>
+      <Delete state={state} setState={setState}/>
     </div> 
   );
 }
