@@ -9,12 +9,12 @@
   background-color: rgb(247, 247, 224);
   display: grid;
   justify-content: center;
-  grid-template-columns: 11.5em 3.6em;
+  grid-template-columns: 7.4em 3.7em 3.7em;
   grid-template-areas: 
-  "display display"
-  "number operators"
-  "number operators"
-  "equals  clear";
+  "display display display"
+  "number number operators"
+  "number number operators"
+  "equals delete clear";
 }
 
 button {
@@ -86,5 +86,15 @@ button {
   }
   button:active {
     box-shadow: inset 0 0 20px 10px rgb(240, 175, 36);
+  }
+}
+
+.delete {
+  grid-area: delete;
+  button {
+    background-color: #f08080;
+  }
+  button:active {
+    box-shadow: inset 0 0 20px 10px #ec5050;
   }
 }
