@@ -17,6 +17,8 @@ function App() {
     })
 
   return (
+    <>
+    <h1 id="title">Emily's Calculator!</h1>
     <div className="calculator">
       <Display state={state} setState={setState}/>
       <Numbers state={state} setState={setState}/>
@@ -25,6 +27,7 @@ function App() {
       <Clear state={state} setState={setState}/>
       <Delete state={state} setState={setState}/>
     </div> 
+    </>
   );
 }
 
