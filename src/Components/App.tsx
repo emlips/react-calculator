@@ -21,11 +21,13 @@ function App() {
     <h1 id="title">Emily's Calculator!</h1>
     <div className="calculator">
       <Display state={state} setState={setState}/>
+      <div className="buttons">
       <Numbers state={state} setState={setState}/>
       <Operators state={state} setState={setState}/>
       <Equals state={state} setState={setState}/>
       <Clear state={state} setState={setState}/>
       <Delete state={state} setState={setState}/>
+      </div>
     </div> 
     </>
   );
