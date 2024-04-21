@@ -30,10 +30,10 @@ body {
 button {
   color: #303030;
   font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
-  height: 3.25em;
-  width: 3em;
+  height: 2em;
+  width: 2em;
   margin: 2px;
   border: none;
   border-radius: 5px;
@@ -82,7 +82,7 @@ button {
 .equals {
   grid-area: equals;
   button {
-    width: 6.2em;
+    width: 4.1em;
     background-color: #44d9af;
   }
   button:active {
